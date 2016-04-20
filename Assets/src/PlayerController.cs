@@ -26,4 +26,9 @@ public class PlayerController : MonoBehaviour {
     {
         moveVelocity = _moveVelocity * moveSpeed;
     }
+
+    void FixedUpdate()
+    {
+        playerRigidbody.MovePosition(playerRigidbody.position + moveVelocity * Time.fixedDeltaTime);
+    }
 }
