@@ -2,11 +2,19 @@
 using System.Collections;
 
 //Kontroluje zachowanie sie objektu gracze na scenie
+
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour {
+
+    Rigidbody playerRigidbody;
+    Vector3 moveVelocity;
+    public float moveSpeed = 5f;
     
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
+        playerRigidbody = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -14,8 +22,8 @@ public class PlayerController : MonoBehaviour {
 	
 	}
 
-    public void Move(Vector3 moveVelocity)
+    public void Move(Vector3 _moveVelocity)
     {
-
+        moveVelocity = _moveVelocity * moveSpeed;
     }
 }

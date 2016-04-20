@@ -6,7 +6,6 @@ using System.Collections;
 [RequireComponent (typeof (PlayerController))] //wymaga komponentu PlayerController w obiekcie
 public class PlayerInput : MonoBehaviour {
 
-    public float moveSpeed = 5f;
     Vector3 moveInput;
     Vector3 moveVelocity;
     PlayerController controller;
@@ -19,7 +18,7 @@ public class PlayerInput : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         moveInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        moveVelocity = moveInput.normalized * moveSpeed;
+        moveVelocity = moveInput.normalized;
         controller.Move(moveVelocity);
 
 	}
