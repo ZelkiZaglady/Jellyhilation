@@ -317,3 +317,6 @@ paket-files/
 .idea/
 *.sln.iml
 Jellyhilation/Library/AssetImportState
+
+!Assets/*.meta
+!Assets/*/*.meta
