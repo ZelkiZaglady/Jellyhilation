@@ -320,3 +320,4 @@ Jellyhilation/Library/AssetImportState
 
 !Assets/*.meta
 !Assets/*/*.meta
+ProjectSettings/*
